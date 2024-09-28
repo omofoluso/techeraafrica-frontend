@@ -1,0 +1,4 @@
+
+body {
+  @apply font-sans; /* This will apply Montserrat as the default font for the body */
+}
