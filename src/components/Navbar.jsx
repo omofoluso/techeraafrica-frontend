@@ -53,7 +53,7 @@ const Navbar = () => {
           {/* Join Us Button for Desktop */}
           <div className="hidden md:block">
             <button className="bg-black text-white px-4 py-2 rounded hover:bg-orange-600 transition duration-300">
-              Join Us Now
+              <Link to='interest'>Join Us Now</Link>
             </button>
           </div>
 

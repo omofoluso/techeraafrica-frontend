@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import { FaTools, FaCloud, FaVrCardboard, FaCode, FaShieldAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Home() {
     const programs = [
@@ -130,7 +131,7 @@ function Home() {
 
                 {/* Contact Us Button */}
                 <button className="px-6 py-2 text-blue-500 border border-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">
-                Contact Us
+                <Link to='interest'>Contact Us </Link>
                 </button>
             </div>
         </section>
