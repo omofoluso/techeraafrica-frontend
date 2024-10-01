@@ -94,7 +94,7 @@ const Navbar = () => {
           {/* Join Us Button for Mobile */}
           <div className="mt-8 px-6">
             <button className="bg-black text-white w-full px-4 py-2 rounded hover:bg-blue-600 transition duration-300">
-              Join Us Now
+              <Link to='interest'>Join Us Now</Link>
             </button>
           </div>
         </div>
