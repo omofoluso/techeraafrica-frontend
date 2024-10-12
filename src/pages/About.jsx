@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import { FaUniversalAccess, FaLightbulb, FaUsers, FaCheckCircle, FaChartLine,  FaLaptopCode, FaChalkboardTeacher, FaBuilding, FaUserGraduate } from 'react-icons/fa';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in milliseconds
+    });
+  }, []);
   return (
-    <section className="mt-16 py-16 bg-gray-100 md:px-28">
+    <section className=" mt-16 py-16 bg-gray-100 md:px-28">
       <div className="container mx-auto px-8 lg:px-16">
         {/* About Us Heading */}
         <h2 className="text-5xl font-bold text-center mb-10 text-blue-900">About Us</h2>
@@ -31,7 +37,7 @@ function About() {
         </div>
     
         {/* Our Values Section */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-12">
+        <div data-aos="fade-up" data-aos-duration="3000" className="bg-white rounded-lg shadow-md p-8 mb-12">
           <h3 className="text-3xl font-semibold text-blue-900 text-center mb-8">Our Values</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -83,7 +89,7 @@ function About() {
         </div>
     
         {/* Our Offerings Section */}
-        <div className="bg-gray-200 rounded-lg shadow-md p-8 mb-12">
+        <div data-aos="fade-left" data-aos-duration="3000" className="bg-gray-200 rounded-lg shadow-md p-8 mb-12">
           <h3 className="text-3xl font-semibold text-blue-900 text-center mb-8">Our Offerings</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             

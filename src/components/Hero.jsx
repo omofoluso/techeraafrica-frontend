@@ -1,6 +1,13 @@
 import React from 'react'
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function Hero() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-between flex-wrap container mx-auto px-6 md:px-16 lg:px-28 py-16 md:py-32 w-full mt-20 md:mt-0">
   
@@ -13,12 +20,18 @@ function Hero() {
           Welcome to Techera, home of Tech Dreams. This is our E-learning portal for Tech Enthusiasts. Apply below to register your interest in any of our courses.
         </p>
         <div className="flex space-x-4">
-          <button className="bg-black text-white px-4 py-2 md:px-6 md:py-2 rounded hover:bg-orange-600 transition duration-300">
+          <motion.button className="bg-black text-white px-4 py-2 md:px-6 md:py-2 rounded hover:bg-orange-600 transition duration-300"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          >
             Join Now
-          </button>
-          <button className="bg-gray-300 text-black px-4 py-2 md:px-6 md:py-2 rounded hover:bg-gray-400 transition duration-300">
+          </motion.button>
+          <motion.button className="bg-gray-300 text-black px-4 py-2 md:px-6 md:py-2 rounded hover:bg-gray-400 transition duration-300"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          >
             Contact Us
-          </button>
+          </motion.button>
         </div>
       </div>
 

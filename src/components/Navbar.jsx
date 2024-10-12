@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -7,6 +8,13 @@ const Navbar = () => {
 
   // Add scroll event listener to update state
   useEffect(() => {
+
+    // const { scrollYProgress } = useScroll();
+    // const scaleX = useSpring(scrollYProgress, {
+    //   stiffness: 100,
+    //   damping: 30,
+    //   restDelta: 0.001
+    // });
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);
@@ -52,9 +60,12 @@ const Navbar = () => {
 
           {/* Join Us Button for Desktop */}
           <div className="hidden md:block">
-            <button className="bg-black text-white px-4 py-2 rounded hover:bg-orange-600 transition duration-300">
+            <motion.button className="bg-black text-white px-4 py-2 rounded hover:bg-orange-600 transition duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            >
               <Link to='interest'>Join Us Now</Link>
-            </button>
+            </motion.button>
           </div>
 
           {/* Hamburger Menu Icon for Mobile */}
