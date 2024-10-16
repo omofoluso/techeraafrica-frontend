@@ -14,7 +14,7 @@ const Forms = () => {
         location: '',
         program: '',
         how_did_you_hear_about_us: '',
-        referred_by: '',
+        cover_letter: '',
         country: ''
     });
 
@@ -61,7 +61,7 @@ const Forms = () => {
                     location: '',
                     program: '',
                     how_did_you_hear_about_us: '',
-                    referred_by: ''
+                    cover_letter: ''
                 });
             } else {
                 setErrorMessage('Registration failed. Please try again.'); // Set error message
@@ -83,7 +83,8 @@ const Forms = () => {
             const countryList = data.map((country) => ({
               name: country.name.common,
               code: country.cca2
-            }));
+            }))
+            .sort((a, b) => a.name.localeCompare(b.name));
             setCountries(countryList);
           })
           .catch((error) => console.error('Error fetching country data:', error));
@@ -238,9 +239,9 @@ const Forms = () => {
         //     <div className='w-[100%] mt-5'>
         //         <input
         //             type="text"
-        //             name="referred_by"
+        //             name="cover_letter"
         //             placeholder="How Did You Hear About Us (Other)"
-        //             value={formData.referred_by}
+        //             value={formData.cover_letter}
         //             onChange={handleChange}
         //             required
         //             className='outline-orange-500 border border-gray-400 p-2 rounded-lg w-full'
@@ -413,14 +414,24 @@ const Forms = () => {
                 </div>
             </div>
 
-            <div className='w-full mt-5'>
+            {/* <div className='w-full mt-5'>
                 <input
                     type="text"
-                    name="referred_by"
+                    name="cover_letter"
                     placeholder="How Did You Hear About Us (Other)"
-                    value={formData.referred_by}
+                    value={formData.cover_letter}
                     onChange={handleChange}
                     className='outline-orange-500 border border-gray-400 p-2 rounded-lg w-full'
+                />
+            </div> */}
+            <div className='w-full mt-5'>
+                <textarea
+                    name="cover_letter"
+                    placeholder="Why do you think you're a good fit for the program?"
+                    value={formData.cover_letter}
+                    onChange={handleChange}
+                    className='outline-orange-500 border border-gray-400 p-2 rounded-lg w-full'
+                    rows="4"  // Optional: You can set the number of rows for height
                 />
             </div>
 

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -13,15 +13,15 @@ import VirtualReality from './pages/VirtualReality';
 import CloudComputing from './pages/CloudComputing';
 import DataAnalysis from './pages/DataAnalysis';
 import FullStack from './pages/FullStack';
-import { motion, useScroll, useSpring } from "framer-motion";
+// import { useScroll, useSpring } from "framer-motion";
 
 function App() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  // const { scrollYProgress } = useScroll();
+  // const scaleX = useSpring(scrollYProgress, {
+  //   stiffness: 100,
+  //   damping: 30,
+  //   restDelta: 0.001
+  // });
 
   return (
     <>

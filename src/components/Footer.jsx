@@ -12,8 +12,8 @@ function Footer() {
         
         {/* Right: Links for Privacy Policy and Terms of Use */}
         <div className="flex space-x-4">
-          <a href="#" className="hover:text-blue-500">Privacy Policy</a>
-          <a href="#" className="hover:text-blue-500">Terms of Use</a>
+          <a href="/" className="hover:text-blue-500">Privacy Policy</a>
+          <a href="/" className="hover:text-blue-500">Terms of Use</a>
         </div>
       </div>
     </footer>

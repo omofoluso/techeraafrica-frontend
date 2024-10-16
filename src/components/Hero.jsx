@@ -1,13 +1,13 @@
 import React from 'react'
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Hero() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  // const { scrollYProgress } = useScroll();
+  // const scaleX = useSpring(scrollYProgress, {
+  //   stiffness: 100,
+  //   damping: 30,
+  //   restDelta: 0.001
+  // });
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-between flex-wrap container mx-auto px-6 md:px-16 lg:px-28 py-16 md:py-32 w-full mt-20 md:mt-0">
   
